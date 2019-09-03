@@ -76,3 +76,13 @@ def is_board_clear( board )
     return true
 
 end
+
+def update_board_after_shot(board, x, y)
+
+    if board[x][y] > 0
+        board[x][y] = -2
+    else
+        board[x][y] = -1
+    end
+
+end
