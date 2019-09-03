@@ -1,10 +1,15 @@
 require "colorize"
 
+# String.colors                       # return array of all possible colors names
+# String.modes                        # return array of all possible modes
+# String.color_samples                # displays color samples in all combinations
+# exit
+
 Ship_colors = {
     4 => :light_yellow,
     3 => :light_green,
-    2 => :light_cyan,
-    1 => :light_magenta,    # submarine
+    2 => :white,
+    1 => :light_cyan,       # submarine
     0 => :light_cyan,       # empty / water
     -1 => :light_cyan,      # shot in water
     -2 => :light_red,       # ship got hit
@@ -22,9 +27,9 @@ def show_splash_screen
     "#     #   ##   ##### ##### #      ######  ####  #    # # #####  \n" +
     "#     #  #  #    #     #   #      #      #      #    # # #    # \n" +
     "######  #    #   #     #   #      #####   ####  ###### # #    # \n" +
-    "#     # ######   #     #   #      #           # #    # # #####  \n" +
-    "#     # #    #   #     #   #      #      #    # #    # # #      \n" +
-    "######  #    #   #     #   ###### ######  ####  #    # # #      \n"
+    "#     # ######   #     #   #      #           # #    # # #####  \n".colorize(:color => :light_red) +
+    "#     # #    #   #     #   #      #      #    # #    # # #      \n".colorize(:color => :red) +
+    "######  #    #   #     #   ###### ######  ####  #    # # #      \n".colorize(:color => :red)
 end
 
 def render_letters
@@ -46,9 +51,11 @@ def render_cell(row, idx)
 
     case row[idx]
     when 0
-        symbol = "◻"
+        symbol = "~" #"◻"
     when -2
         symbol = "◉"
+    when -1 
+        symbol = " "
     else
         symbol = "◼"
     end
@@ -57,7 +64,9 @@ def render_cell(row, idx)
     print " ".colorize(:background => :black)
 end
 
-def render_boards(player_board, enemy_board)
+def render_boards(player_board, enemy_board, round_counter)
+
+    puts "Round #{round_counter}\n".center(55)
 
     # Printing out letters for the player board
     render_letters
