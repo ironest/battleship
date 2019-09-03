@@ -20,9 +20,20 @@ ship_list.each do |ship_size|
     enemy_board = random_place_ship(ship_size, enemy_board)
 end
 
-render_boards(player_board, enemy_board)
+until isBoardClear(player_board) or isBoardClear(enemy_board)
 
-print "Where do you want to shoot? (e.g. B5)"
-coordinates = gets.chomp
-#implement method to check input
+    render_boards(player_board, enemy_board)
+
+    while true
+        print "\nWhere do you want to shoot? (e.g. B5) "
+        coordinates = gets.chomp
+        break if validate_coordinates(coordinates)
+    end
+    
+    #implement method to check input
+    x = parse_coordinates(coordinates)[0]
+    y = parse_coordinates(coordinates)[1]
+
+    sleep 1
+end
 
