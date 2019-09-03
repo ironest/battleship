@@ -22,7 +22,7 @@ end
 turn_counter = 1
 
 system("clear")
-render_boards(player_board, enemy_board)
+render_boards(player_board, enemy_board, turn_counter)
 
 while true
     if is_board_clear(player_board)
@@ -45,7 +45,7 @@ while true
             print "Wrong coordinates... try again"
             sleep 1
             system("clear")
-            render_boards(player_board, enemy_board)
+            render_boards(player_board, enemy_board, turn_counter)
         end
         
         #implement method to check input
@@ -68,6 +68,6 @@ while true
     turn_counter += 1
     sleep 2
     system("clear")
-    render_boards(player_board, enemy_board)
+    render_boards(player_board, enemy_board, turn_counter)
 end
 
