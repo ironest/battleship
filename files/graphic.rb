@@ -1,10 +1,12 @@
 require "colorize"
 
 Ship_colors = {
+    6 => :light_cyan,
+    5 => :light_red,
     4 => :light_yellow,
     3 => :light_green,
     2 => :light_cyan,
-    1 => :light_red,
+    1 => :light_magenta,
     0 => :light_cyan
 }
 
@@ -33,6 +35,8 @@ def render_cell(row, idx)
     case row[idx]
     when 0
         symbol = "◻"
+    when 5
+        symbol = "◉"
     else
         symbol = "◼"
     end
