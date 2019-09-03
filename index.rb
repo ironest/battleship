@@ -23,7 +23,7 @@ end
 
 turn_counter = 1
 
-until isBoardClear(player_board) or isBoardClear(enemy_board)
+until is_board_clear(player_board) or is_board_clear(enemy_board)
 
     system("clear")
     render_boards(player_board, enemy_board)

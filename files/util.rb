@@ -64,7 +64,7 @@ def parse_coordinates( input )
     return [3, 3]
 end
 
-def isBoardClear( board )
+def is_board_clear( board )
     
     10.times do |x|
         10.times do |y|
