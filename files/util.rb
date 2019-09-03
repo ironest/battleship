@@ -87,6 +87,21 @@ def parse_coordinates( input )
     return [x, y]
 end
 
+def get_human_coordinates( array )
+
+    counter = array[0]
+
+    for x in ("A".."J")
+        break if counter == 0
+        counter -= 1
+    end
+
+    #x = counter
+    y = array[1].to_i
+
+    return [x, y]
+end
+
 def is_board_clear( board )
     
     10.times do |x|
@@ -95,20 +110,25 @@ def is_board_clear( board )
         end
     end
 
-    p "Board is clear"
     return true
 
 end
 
-def update_board_after_shot(board, coordinates)
+def update_board_after_shot(board, array)
 
-    y = coordinates[0]
-    x = coordinates[1]
+    y = array[0]
+    x = array[1]
 
     if board[x][y] > 0
         board[x][y] = -2
+        puts "Something got hit!".colorize(:color => :green)
     else
         board[x][y] = -1
+        puts "Nothing there.".colorize(:color => :light_black)
     end
 
+end
+
+def get_random_coordinates
+    return [rand(0..9),rand(0..9)]
 end
