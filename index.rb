@@ -17,16 +17,25 @@ end
 
 turn_counter = 1
 
-until is_board_clear(player_board) or is_board_clear(enemy_board)
+system("clear")
+render_boards(player_board, enemy_board)
 
-    system("clear")
-    render_boards(player_board, enemy_board)
+while true
+    if is_board_clear(player_board)
+        puts "\nComputer win!"
+        break
+    elsif is_board_clear(enemy_board)
+        puts "\n#{player} win!"
+        break
+    else
+        nil
+    end
 
     if turn_counter % 2 == 1
 
         while true
             puts "\n#{player} it's your turn!"
-            print "Where do you want to shoot? (e.g. B5) "
+            print "Where do you want to shoot? "
             coordinates = gets.chomp
             break if validate_coordinates(coordinates)
             print "Wrong coordinates... try again"
@@ -37,15 +46,24 @@ until is_board_clear(player_board) or is_board_clear(enemy_board)
         
         #implement method to check input
         xy = parse_coordinates(coordinates)
-
         update_board_after_shot(enemy_board, xy)
 
     else
         puts "\nIt's computer turn!"
-        update_board_after_shot(player_board, [0, 0])
+        print "The CPU is shooting to"
+        10.times do
+            print "."
+            sleep 0.2
+        end
+        xy = get_random_coordinates
+        human_xy = get_human_coordinates(xy)
+        puts "#{human_xy[0]}#{human_xy[1]}"
+        update_board_after_shot(player_board, xy)
     end
 
     turn_counter += 1
-    sleep 1
+    sleep 2
+    system("clear")
+    render_boards(player_board, enemy_board)
 end
 
