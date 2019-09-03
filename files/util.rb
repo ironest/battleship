@@ -14,8 +14,6 @@ def init_board
 
 end
 
-
-
 def random_place_ship(size, board)
 
     fit = false
@@ -55,5 +53,26 @@ def random_place_ship(size, board)
     end
 
     return newBoard
+
+end
+
+def validate_coordinates( input )
+    return true
+end
+
+def parse_coordinates( input )
+    return [3, 3]
+end
+
+def isBoardClear( board )
+    
+    10.times do |x|
+        10.times do |y|
+            return false if board[x][y] > 0
+        end
+    end
+
+    p "Board is clear"
+    return true
 
 end
