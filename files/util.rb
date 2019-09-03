@@ -122,9 +122,11 @@ def update_board_after_shot(board, array)
     if board[x][y] > 0
         board[x][y] = -2
         puts "Something got hit!".colorize(:color => :green)
-    else
+    elsif board[x][y] == 0
         board[x][y] = -1
         puts "Nothing there.".colorize(:color => :light_black)
+    else
+        puts "Already shot here!".colorize(:color => :light_magenta)
     end
 
 end
