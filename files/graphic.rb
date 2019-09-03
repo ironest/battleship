@@ -12,8 +12,20 @@ Ship_colors = {
 
 # Constant to space out the Player and the CPU boards
 Separator = " "*10
-V_axis = Size = 0..9
-H_axis = "A..J"
+Size = 0..9
+
+def show_splash_screen
+    system("clear")
+    puts "Welcome to...
+    \n######                                                          
+    #     #   ##   ##### ##### #      ######  ####  #    # # #####  
+    #     #  #  #    #     #   #      #      #      #    # # #    # 
+    ######  #    #   #     #   #      #####   ####  ###### # #    # 
+    #     # ######   #     #   #      #           # #    # # #####  
+    #     # #    #   #     #   #      #      #    # #    # # #      
+    ######  #    #   #     #   ###### ######  ####  #    # # #      
+    "
+end
 
 def render_letters
     print "  "
