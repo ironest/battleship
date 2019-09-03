@@ -56,12 +56,35 @@ def random_place_ship(size, board)
 
 end
 
+def is_number? string
+    true if Float(string) rescue false
+end
+
 def validate_coordinates( input )
+
+    return false if input.length != 2
+    
+    return false if !is_number?(input[1])
+
+    return false if !((0..9).include?(input[1].to_i))
+
+    return false if !(("A".."J").include?(input[0].upcase))
+
     return true
 end
 
 def parse_coordinates( input )
-    return [3, 3]
+
+    counter = 0
+    for x in ("A".."J")
+        break if input[0].upcase == x
+        counter += 1
+    end
+
+    x = counter
+    y = input[1].to_i
+
+    return [x, y]
 end
 
 def is_board_clear( board )
@@ -77,7 +100,10 @@ def is_board_clear( board )
 
 end
 
-def update_board_after_shot(board, x, y)
+def update_board_after_shot(board, coordinates)
+
+    y = coordinates[0]
+    x = coordinates[1]
 
     if board[x][y] > 0
         board[x][y] = -2
