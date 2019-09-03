@@ -1,13 +1,13 @@
 require "colorize"
 
 Ship_colors = {
-    6 => :light_cyan,
-    5 => :light_red,
     4 => :light_yellow,
     3 => :light_green,
     2 => :light_cyan,
-    1 => :light_magenta,
-    0 => :light_cyan
+    1 => :light_magenta,    # submarine
+    0 => :light_cyan,       # empty / water
+    -1 => :light_cyan,      # shot in water
+    -2 => :light_red,       # ship got hit
 }
 
 # Constant to space out the Player and the CPU boards
@@ -35,7 +35,7 @@ def render_cell(row, idx)
     case row[idx]
     when 0
         symbol = "◻"
-    when 5
+    when -2
         symbol = "◉"
     else
         symbol = "◼"
