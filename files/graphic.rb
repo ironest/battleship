@@ -39,13 +39,13 @@ def render_letters
     end
 end
 
-def render_row(board, idx)
+def render_row(board, idx, is_enemy_board)
     for i in Size
-        render_cell(board[idx], i)
+        render_cell(board[idx], i, is_enemy_board)
     end
 end
 
-def render_cell(row, idx)
+def render_cell(row, idx, is_enemy_board)
 
     text_color = Ship_colors[row[idx]]
 
@@ -57,7 +57,12 @@ def render_cell(row, idx)
     when -1 
         symbol = " "
     else
-        symbol = "◼"
+        if is_enemy_board
+            symbol = "~"
+            text_color = Ship_colors[0]
+        else
+            symbol = "◼"
+        end
     end
 
     print "#{symbol}".colorize(:color => text_color, :background => :black)
@@ -67,6 +72,11 @@ end
 def render_boards(player_board, enemy_board, round_counter)
 
     puts "Round #{round_counter}\n".center(55)
+
+    print "Your board".center(22)
+    print Separator
+    puts "Computer board".center(22)
+    puts ""
 
     # Printing out letters for the player board
     render_letters
@@ -82,13 +92,13 @@ def render_boards(player_board, enemy_board, round_counter)
         print "#{i}"
         print " ".colorize(:background => :black) 
         
-        render_row(player_board, i)
+        render_row(player_board, i, false)
 
         print "#{Separator}"
         print "#{i}"
         print " ".colorize(:background => :black)
 
-        render_row(enemy_board, i)
+        render_row(enemy_board, i, true)
 
         print "\n"
     end
