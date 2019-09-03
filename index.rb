@@ -3,9 +3,13 @@ require_relative "./files/graphic"
 
 ship_list = [1, 1, 1, 2, 2, 2, 3, 3, 4]
 
-# print "\nEnter your name: "
-# player = gets.chomp
-player = "Ricky"
+show_splash_screen
+
+print "\nEnter your name: "
+player = gets.chomp
+
+puts "\nPress ENTER to START the game"
+gets
 
 player_board = init_board
 enemy_board  = init_board
@@ -34,7 +38,7 @@ while true
     if turn_counter % 2 == 1
 
         while true
-            puts "\n#{player} it's your turn!"
+            puts "\n#{player}, it's your turn!"
             print "Where do you want to shoot? "
             coordinates = gets.chomp
             break if validate_coordinates(coordinates)
