@@ -78,8 +78,9 @@ Below is a revisited and extended version of the definition of symbols
 Value in memory | Render graphic | Meaning
 ------------ | ------------- | -------------
 0 | <span style='color:blue'>~</span> | The cell contains water
-1 | <span style='color:cyan'>◼</span> | The cell contains a submarine
-2 | <span style='color:gray'>◼◼</span> | The cell contains a (piece of) destroyer
+1 | <img src="https://placehold.it/10/00FFFF/000000?text=+"/> | The cell contains a submarine
+2 | <img src="https://placehold.it/10/C2D6D6/000000?text=+"/>
+<span style='color:gray'>◼◼</span> | The cell contains a (piece of) destroyer
 3 | <span style='color:lime'>◼◼◼</span> | The cell contains a (piece of) cruiser
 4 | <span style='color:yellow'>◼◼◼◼</span> | The cell contains a (piece of) aircraft carrier
 -2 | <span style='color:red'>◉</span> | The cell contains a damaged ship
