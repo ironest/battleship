@@ -107,7 +107,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius m
 
 ### Control Flow Diagram
 
-Insert image here
+<img src="docs/06_workflow.png" alt="Control Flow Diagram"/>
 
 ### Status Updates ###
 
