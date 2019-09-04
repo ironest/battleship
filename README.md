@@ -70,7 +70,7 @@ Here is what my Trello board looked like after finishing breaking down the proje
 
 ### Features ###
 
-#### Coordinates (from user input) ####
+#### 1. Coordinates (from user input) ####
 
 One of the most important feature of the app revolves around a user beign able provide their own input to be used at coordinates. This aspect is fundamental to give a player that sense of being actively engaged in the game. That said, user inputs are potentially subjected to human errors, meaning that anything manually typed must go through a validation layer, before taking into consideration the data inputted.
 
@@ -95,15 +95,17 @@ while true
 end
 ```
 
-##### Feature 2 - TBD
+#### 2. TBD ####
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo. Nunc fermentum ligula imperdiet laoreet vehicula. Fusce libero tellus, fermentum eu lobortis non, pulvinar vulputate justo. Sed lacus augue, gravida vel iaculis quis, egestas sit amet massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris venenatis pretium mattis. Suspendisse potenti. Pellentesque vulputate velit nulla, ac ornare ipsum auctor vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo.
 
-##### Feature 3 - TBD
+#### 3. TBD ####
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo. Nunc fermentum ligula imperdiet laoreet vehicula. Fusce libero tellus, fermentum eu lobortis non, pulvinar vulputate justo. Sed lacus augue, gravida vel iaculis quis, egestas sit amet massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris venenatis pretium mattis. Suspendisse potenti. Pellentesque vulputate velit nulla, ac ornare ipsum auctor vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo.
 
 ### User Interaction and Experience
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo.
 
 ### Control Flow Diagram
 
@@ -111,7 +113,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius m
 
 ### Status Updates ###
 
-#### 03/08/2019 - Battleship board data structure ####
+#### 1. Battleship board data structure (03/08/2019) ####
 
 The Battleship game I am creating revolves around the concept of maintaining a 10x10 matrix with data in it. To achieve such requirement, I am using the Ruby built-in Array class and am also using each element of such array to hold values of other 10 arrays. In total I'll have 11 arrays, each with length equal to 10.
 Now that the data structure is ready, I have to create a logic on how to
@@ -174,7 +176,8 @@ def render_cell(cell_value)
 end
 ```
 
-#### Status Update 1 - 4/08/2019 - Horrible visual bug ####
+#### 2. Horrible visual bug (04/08/2019) ####
+
 
 I did my best to ignore a cosmetic issue... but I sincerely can't stand it anymore.
 Since the ships are autonomously placed on the board by the game itself, whenever two (or more) ships sit next to each other, the user has little or no chance to distinguish them apart and, sometimes, it's also impossible to determine the orientation of a ship.
