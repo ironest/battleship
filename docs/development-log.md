@@ -69,7 +69,7 @@ I did my best to ignore a cosmetic issue... but I sincerely can't stand it anymo
 Since the ships are randomly placed on the board by the game itself, whenever two (or more) ships sit next to each other, the user has little or no chance to distinguish them apart and, sometimes, it's also impossible to determine the orientation of a ship.
 Below an example:
 
-<img src="docs/01_board_render.png" alt="Cosmetic issue" width="250"/> <img src="docs/02_board_render.png" alt="Cosmetic issue" width="250"/>
+<img src="01_board_render.png" alt="Cosmetic issue" width="250"/> <img src="02_board_render.png" alt="Cosmetic issue" width="250"/>
 
 Usually cosmetic issues are not very important and should to be left at the very end of a project due to their *low priority* but... for a game, I felt this problem was quite bothering. So, I decided to tackle it down with a redesign to the code, to include more colors which could have improved the ability to read objects on the board.
 
@@ -103,4 +103,4 @@ Interesting enough, the nice way I deteached the logic of colors from the code, 
 
 Below are a couple of samples produced with the new version of the board
 
-<img src="docs/04_board_render.png" alt="Cosmetic issue" width="250"/> <img src="docs/05_board_render.png" alt="Cosmetic issue" width="250"/>
+<img src="04_board_render.png" alt="Cosmetic issue" width="250"/> <img src="05_board_render.png" alt="Cosmetic issue" width="250"/>
