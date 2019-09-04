@@ -1,10 +1,10 @@
-# <u>Battleship</u> #
+# Battleship #
 
 Github Repo: github.com/ironest/battleship.git
 
 Contributors: Riccardo Carzania (github.com/ironest)
 
-### <u>Description</u> ###
+### Description ###
 
 This project implements the famous Battleship game with the Ruby programming language. The game is created as a terminal app and, as such, is executed and played from the command line interface. 
 
@@ -12,7 +12,7 @@ This project implements the famous Battleship game with the Ruby programming lan
 
 The app's purpose is to entertain a single user player who competes against the CPU, with the objective of winning the game.
 
-### <u>Development plan</u> ###
+### Development plan ###
 
 #### Brainstorming ####
 
@@ -68,7 +68,7 @@ Here is what my Trello board looked like after finishing breaking down the proje
 
 <img src="docs/00_trello_backlog.png" alt="Backlog Github" width="250"/>
 
-### <u>Features</u> ###
+### Features ###
 
 #### Coordinates (from user input) ####
 
@@ -95,23 +95,23 @@ while true
 end
 ```
 
-##### <u>Feature 2 - TBD</u>
+##### Feature 2 - TBD
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo. Nunc fermentum ligula imperdiet laoreet vehicula. Fusce libero tellus, fermentum eu lobortis non, pulvinar vulputate justo. Sed lacus augue, gravida vel iaculis quis, egestas sit amet massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris venenatis pretium mattis. Suspendisse potenti. Pellentesque vulputate velit nulla, ac ornare ipsum auctor vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-##### <u>Feature 3 - TBD</u>
+##### Feature 3 - TBD
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo. Nunc fermentum ligula imperdiet laoreet vehicula. Fusce libero tellus, fermentum eu lobortis non, pulvinar vulputate justo. Sed lacus augue, gravida vel iaculis quis, egestas sit amet massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris venenatis pretium mattis. Suspendisse potenti. Pellentesque vulputate velit nulla, ac ornare ipsum auctor vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 
-### <u>User Interaction and Experience</u>
+### User Interaction and Experience
 
 ### Control Flow Diagram
 
 Insert image here
 
-#### Status Updates ####
-03/08/2019
-<u>Status Update 1 - Battleship board data structure</u>
+### Status Updates ###
+
+#### 03/08/2019 - Battleship board data structure ####
 
 The Battleship game I am creating revolves around the concept of maintaining a 10x10 matrix with data in it. To achieve such requirement, I am using the Ruby built-in Array class and am also using each element of such array to hold values of other 10 arrays. In total I'll have 11 arrays, each with length equal to 10.
 Now that the data structure is ready, I have to create a logic on how to
@@ -174,8 +174,7 @@ def render_cell(cell_value)
 end
 ```
 
-4/08/2019
-<u>Status Update 2 - Horrible visual bug</u>
+#### Status Update 1 - 4/08/2019 - Horrible visual bug ####
 
 I did my best to ignore a cosmetic issue... but I sincerely can't stand it anymore.
 Since the ships are autonomously placed on the board by the game itself, whenever two (or more) ships sit next to each other, the user has little or no chance to distinguish them apart and, sometimes, it's also impossible to determine the orientation of a ship.
