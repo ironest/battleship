@@ -72,7 +72,7 @@ Here is what my Trello board looked like after finishing breaking down the proje
 
 #### 1. Coordinates (from user input) ####
 
-One of the most important feature of the app revolves around a user beign able provide their own input to be used at coordinates. This aspect is fundamental to give a player that sense of being actively engaged in the game. That said, user inputs are potentially subjected to human errors, meaning that anything manually typed must go through a validation layer, before taking into consideration the data inputted.
+One of the most important feature of the app revolves around users beign able to provide their own input as coordinates. This aspect is fundamental to give a player that sense of being active in the game. That said, user inputs are potentially subjected to human errors, meaning that anything manually typed must go through a validation layer, before taking into consideration the data inputted.
 
 The nature of the input must be supplied as a 2 character long string, in the shape of <*letter*><*digit*> such as **B5**.
 A user input is read by the instruction `coordinates = gets.chomp()` and, depending on whether or not the `coordinates` variable satisfies the expected syntax, the game proceeds or requests the user to re-enter another input.
@@ -91,7 +91,7 @@ while true
    print "Where do you want to shoot? "
    coordinates = gets.chomp
    break if validate_coordinates(coordinates)
-   print "Wrong coordinates... try again"
+   print "Wrong coordinates: type something like \"B5\" or \"b7\". Try again"
 end
 ```
 
