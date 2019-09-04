@@ -36,12 +36,21 @@ Ensure that your features include the following language elements and concepts:
  * error handling
 
 ### User Interaction and Experience
+
+The Battleship game has a simple design which relies on a linear interaction, where a user is never requested to make a choice with multiple options or proposed a menu where to choose from more than one path. The inputs required are straightforward.
+When the game start, a welcoming message is printed and a big splash-screen is showed. Right underneath the splash-screen, the user is prompted to type his/her name for a more personalized experience.
+<img src="07_splash_screen.png" alt="Welcome and Splash-screen" width="75%" height="75%"/>
+
+Once the game starts, the player is proposed with two main visual elements:
+ * the player's board
+ * the opponent's board
+
+To make easier to distinguish which one is which, a label floats above each board
+<img src="08_game_running.png" alt="Game running" width="50%" height="50%"/>
+
  * how the user will find out how to interact with / use each feature
  * how the user will interact with / use each feature
  * how errors will be handled by the application and displayed to the user
-
-<img src="07_splash_screen.png" alt="Control Flow Diagram" width="50%" height="50%"/>
-<img src="08_game_running.png" alt="Control Flow Diagram" width="50%" height="50%"/>
 
 ### Control Flow Diagram
 
