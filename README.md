@@ -1,10 +1,10 @@
-## Battleship - The game ##
+# <u>Battleship</u> #
 
 Github Repo: github.com/ironest/battleship.git
 
 Contributors: Riccardo Carzania (github.com/ironest)
 
-### Description ###
+### <u>Description</u> ###
 
 This project implements the famous Battleship game with the Ruby programming language. The game is created as a terminal app and, as such, is executed and played from the command line interface. 
 
@@ -12,33 +12,33 @@ This project implements the famous Battleship game with the Ruby programming lan
 
 The app's purpose is to entertain a single user player who competes against the CPU, with the objective of winning the game.
 
-### Development plan ###
+### <u>Development plan</u> ###
 
 #### Brainstorming ####
 
-The main requirement of the project was to build an app for the command line, which is usually an unfriendly environment for the average user. Due to this, my brainstorming process was heavily affected by the urge of making something fun and enjoyable for anyone. With that in mind, I decided to go for a small game.
-Usually, a game is more enjoyable when there's graphic, animations, colors and mouse-inputs but, once again, the "command line" requirement brings in some strong constraints. That meant that the game had to leverage more the art of "patience" and "strategy" rather than visual effects.
+The main requirement of the project is to build an app for the command line, which is usually an unfriendly environment for the average user. Due to this, my brainstorming process was heavily affected by the urge of making something fun and enjoyable for "average user". With that in mind, I decided to go for a simple game.
+Usually, a game is more enjoyable when there's graphic, animations, colors and mouse-inputs but, once again, the "command line" requirement brings in some strong constraints. That means the game has to leverage more the art of "patience" and "strategy" rather than visual effects.
 
-This is when I decided to create the old game "BattheShip":
+This is why I decided to recreate the old BattheShip game:
  * it doesn't need animation
  * it doesn't need graphic
  * it doesn't necessarily require input from a mouse
 
-I proposed my idea to my tech leader, Gareth, who luckily accepted.
-The early stage of my plan was spent on Trello, a web-based task management app that gives a visual overview of what needs to be done and who is working on it. Mostly, it looks like a whiteboard filled with post-it notes. Obviously, I started with an empty board and, from there, I started filling in tasks and ideas.
+I proposed my idea to my tech leader, Gareth, who luckily approved it.
+The early stage of my plan was spent on Trello, a web-based task management app that gives a visual overview of what needs to be done and who works on what. Generically speaking, Trello looks like a whiteboard filled with post-it notes. Obviously, I started with an empty board and, from there, I started filling in my own tasks and ideas.
 
 #### Plan priority ####
 
-I decided to break down the project into several smaller tasks, in order to make it easier to focus on one challenge at a time, without being distracted by the overall solution. In order of priority, below are are the blocks I planned:
+I decided to break down the project into several smaller tasks, so that it would be easier to focus on one challenge at a time, without being distracted by the overall solution. In order of priority, below are are the blocks I planned:
 
 1. High level design of which elements are needed in the game
    * Player board
    * Computer board
    * List of ships
-      * Submarine (3x ◼)
-      * Destroyer (3x ◼◼)
-      * Cruiser (2x ◼◼◼)
-      * Aircraft Carrier (1x ◼◼◼◼)
+      * Submarine (represented by ◼)
+      * Destroyer (represented by ◼◼)
+      * Cruiser (represented by ◼◼◼)
+      * Aircraft Carrier (represented by ◼◼◼◼)
    * Turn counter
    * Turn alternation
    * Victory condition
@@ -66,13 +66,34 @@ I decided to break down the project into several smaller tasks, in order to make
 
 Here is what my Trello board looked like after finishing breaking down the project into smaller elements
 
-![Trello Backlog](docs/00_trello_backlog.png)
+<img src="docs/00_trello_backlog.png" alt="Backlog Github" width="250"/>
 
-### <u>Features</u>
+### <u>Features</u> ###
 
-##### <u>Feature 1 - TBD</u>
+#### Coordinates from user input ####
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius massa. Quisque eu elit sed odio tristique eleifend vitae vitae leo. Nunc fermentum ligula imperdiet laoreet vehicula. Fusce libero tellus, fermentum eu lobortis non, pulvinar vulputate justo. Sed lacus augue, gravida vel iaculis quis, egestas sit amet massa. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris venenatis pretium mattis. Suspendisse potenti. Pellentesque vulputate velit nulla, ac ornare ipsum auctor vitae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
+One of the most important feature of the app revolves around a user beign able provide their own input to be used at coordinates. This aspect is fundamental to give a player that sense of being actively engaged in the game. That said, user inputs are potentially subjected to human errors, meaning that anything manually typed must go through a validation layer, before taking into consideration the data inputted.
+
+The nature of the input must be supplied as a 2 character long string, in the shape of <*letter*><*digit*> such as **B5**.
+A user input is read by the instruction `coordinates = gets.chomp()` and, depending on whether or not the `coordinates` variable satisfies the expected syntax, the game proceeds or requests the user to re-enter another input.
+
+Below a snippet of the code responsible for the input validation:
+```ruby
+def validate_coordinates( input )
+    return false if input.length != 2
+    return false if !is_number?(input[1])
+    return false if !((0..9).include?(input[1].to_i))
+    return false if !(("A".."J").include?(input[0].upcase))
+    return true
+end
+
+while true
+   print "Where do you want to shoot? "
+   coordinates = gets.chomp
+   break if validate_coordinates(coordinates)
+   print "Wrong coordinates... try again"
+end
+```
 
 ##### <u>Feature 2 - TBD</u>
 
