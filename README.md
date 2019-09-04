@@ -1,8 +1,8 @@
 # Battleship #
 
-Github Repo: github.com/ironest/battleship.git
+Github Repo: [github.com/ironest/battleship](https://github.com/ironest/battleship)
 
-Contributors: Riccardo Carzania (github.com/ironest)
+Contributors: Riccardo Carzania ([github.com/ironest](https://github.com/ironest))
 
 ### Description ###
 
