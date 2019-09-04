@@ -6,13 +6,13 @@ require "colorize"
 # exit
 
 Ship_colors = {
-    4 => :light_yellow,
-    3 => :light_green,
-    2 => :white,
-    1 => :light_cyan,       # submarine
-    0 => :light_cyan,       # empty / water
-    -1 => :light_cyan,      # shot in water
-    -2 => :light_red,       # ship got hit
+    4 => :light_yellow,   # aircraft carrier
+    3 => :light_green,    # cruiser
+    2 => :white,          # destroyer
+    1 => :light_cyan,     # submarine
+    0 => :light_cyan,     # empty / water
+    -1 => :light_cyan,    # shot in water
+    -2 => :light_red,     # ship got hit
 }
 
 # Constant to space out the Player and the CPU boards
