@@ -1,12 +1,21 @@
 require_relative "./files/util"
 require_relative "./files/graphic"
 
-ship_list = [1, 1, 1, 2, 2, 2, 3, 3, 4]
+default_ship_list = [1, 1, 1, 2, 2, 3, 3, 4]
+custom_ship_list = []
 
 show_splash_screen
 
 print "\nEnter your name: "
 player = gets.chomp
+
+display_ship_formation(default_ship_list)
+
+while true
+    print "Would you like to customize the ship formation? (Y/N) "
+    answer = gets.chomp.upcase
+    break if answer == "N" or answer == "Y"
+end
 
 puts "\nPress ENTER to START the game"
 gets
