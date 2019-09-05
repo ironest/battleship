@@ -263,10 +263,6 @@ Once a name is provided, the player is brought to the main screen of the game, w
 To make easier to distinguish which one is which, a label floats above each board
 <img src="docs/08_game_running.png" alt="Game running" width="75%" height="75%"/>
 
- * how the user will find out how to interact with / use each feature
- * how the user will interact with / use each feature
- * how errors will be handled by the application and displayed to the user
-
 When players get to the point where they are required to supply coordinates to where they want to shoot, the expected syntax is in the form of {letter}{number} such as (for example) **B5**. In the eventuality that the provided input does not satisfy the desired syntax, a *discret* red warning is displaied and a new attempt is prompted:
 
 <img src="docs/09_wrong_coordinates.png" alt="Game running" width="75%" height="75%"/>
