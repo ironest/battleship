@@ -32,29 +32,6 @@ Contributors: Riccardo Carzania ([github.com/ironest](https://github.com/ironest
    ```
 7. Enjoy!
 
-### Manual Tests
-
-For this project, manual tests have been designed for those features where a user is requested to manually interact with the game and more subjected to introduce errors.
-Features taken in cosideration are:
-1. Help message
-2. User input Coordinates
-
-For the **Help message** feature, the individual test cases are intended to stimulate the first branches of the workflow. Four different test cases have been designed, each involving the execution of the app from the terminal.
-1. ```$ ruby index.rb```
-2. ```$ ruby index.rb -h```
-3. ```$ ruby index.rb --help```
-4. ```$ ruby index.rb -xyz```
-
-For the **User input Coordinates** feature, the individual test cases are intended to validate various inputs provided by the user while the game is running. Five different test cases have been designed, each involving the execution of the app from the terminal.
-
-5. ```Where do you want to shoot? B5```
-6. ```Where do you want to shoot? 77```
-7. ```Where do you want to shoot? W3```
-8. ```Where do you want to shoot? A```
-9. ```Where do you want to shoot? W3```
-
-For an extended list of Test Cases and its expected results, check [this Excel Spreadsheet](docs/manual-tests.xlsx)
-
 ### Purpose and Scope
 
 Battleship (also Battleships or Sea Battle) is a strategy type guessing game for two players. It is normally played on ruled grids (paper or board) on which each player's fleet of ships (including battleships) are marked. The locations of the fleets are concealed from the other player. Players alternate turns calling "shots" at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
@@ -295,6 +272,29 @@ To make easier to distinguish which one is which, a label floats above each boar
 When players get to the point where they are required to supply coordinates to where they want to shoot, the expected syntax is in the form of {letter}{number} such as (for example) **B5**. In the eventuality that the provided input does not satisfy the desired syntax, a *discret* red warning is displaied and a new attempt is prompted:
 
 <img src="docs/09_wrong_coordinates.png" alt="Game running" width="75%" height="75%"/>
+
+### Manual Tests
+
+For this project, manual tests have been designed for those features where a user is requested to manually interact with the game and more subjected to introduce errors.
+Features taken in cosideration are:
+1. Help message
+2. User input Coordinates
+
+For the **Help message** feature, the individual test cases are intended to stimulate the first branches of the workflow. Four different test cases have been designed, each involving the execution of the app from the terminal.
+1. ```$ ruby index.rb```
+2. ```$ ruby index.rb -h```
+3. ```$ ruby index.rb --help```
+4. ```$ ruby index.rb -xyz```
+
+For the **User input Coordinates** feature, the individual test cases are intended to validate various inputs provided by the user while the game is running. Five different test cases have been designed, each involving the execution of the app from the terminal.
+
+5. ```Where do you want to shoot? B5```
+6. ```Where do you want to shoot? 77```
+7. ```Where do you want to shoot? W3```
+8. ```Where do you want to shoot? A```
+9. ```Where do you want to shoot? W3```
+
+For an extended list of Test Cases and its expected results, check [this Excel Spreadsheet](docs/manual-tests.xlsx)
 
 ### Control Flow Diagram
 
