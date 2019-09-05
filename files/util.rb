@@ -19,7 +19,14 @@ def check_options (array)
 end
 
 def display_help_message
-    puts "Placeholder Help Message"
+    system("clear")
+    puts "Battleship (Help menu)\n" +
+         "----------------------\n" +
+         "Battleship is a strategy type guessing game for a single player.\n" +
+         "It is played on ruled grids on which each player's fleet of ships are marked.\n" +
+         "The locations of the fleets are concealed from the other player.\n" +
+         "Players alternate turns calling 'shots' at the other player's ships.\n" +
+         "The objective of the game is to destroy the opposing player's fleet\n\n"
 end
 
 def init_board
