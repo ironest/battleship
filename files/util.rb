@@ -1,3 +1,27 @@
+HELP_OPTIONS = ["-h", "--help"]
+
+def check_options (array)
+
+    return if array.length == 0
+
+    for opt in HELP_OPTIONS
+        if array.include?(opt)
+            display_help_message()
+            exit
+        end 
+    end
+
+    print "Illegal option: "
+    array.map {|x| print "#{x} "}
+    puts "\nUse [-h] or [--help] to access the help menu"
+    exit
+
+end
+
+def display_help_message
+    puts "Placeholder Help Message"
+end
+
 def init_board
 
     board = []
