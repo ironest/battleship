@@ -32,6 +32,29 @@ Contributors: Riccardo Carzania ([github.com/ironest](https://github.com/ironest
    ```
 7. Enjoy!
 
+### Manual Tests
+
+For this project, manual tests have been designed for those features where a user is requested to manually interact with the game and more subjected to introduce errors.
+Features taken in cosideration are:
+1. Help message
+2. User input Coordinates
+
+For the **Help message** feature, the individual test cases are intended to stimulate the first branches of the workflow. Four different test cases have been designed, each involving the execution of the app from the terminal.
+1. ```$ ruby index.rb```
+2. ```$ ruby index.rb -h```
+3. ```$ ruby index.rb --help```
+4. ```$ ruby index.rb -xyz```
+
+For the **User input Coordinates** feature, the individual test cases are intended to validate various inputs provided by the user while the game is running. Five different test cases have been designed, each involving the execution of the app from the terminal.
+
+5. ```Where do you want to shoot? B5```
+6. ```Where do you want to shoot? 77```
+7. ```Where do you want to shoot? W3```
+8. ```Where do you want to shoot? A```
+9. ```Where do you want to shoot? W3```
+
+For an extended list of Test Cases and its expected results, check [this Excel Spreadsheet](docs/manual-tests.xlsx)
+
 ### Purpose and Scope
 
 Battleship (also Battleships or Sea Battle) is a strategy type guessing game for two players. It is normally played on ruled grids (paper or board) on which each player's fleet of ships (including battleships) are marked. The locations of the fleets are concealed from the other player. Players alternate turns calling "shots" at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
@@ -93,6 +116,12 @@ I decided to break down the project into several smaller tasks, so that it would
    * Splash screen when the game starts
    * Colored output messages
    * Slowing down turn alternations to give the game a "human" feeling with usage of "sleep" instructions
+
+| Feature | Checklist | Priority | Deadline |
+|------------------|--------------------|-------------------|-------------------|
+|User input Coordinates|◼ check if the input is a 2 character long string<br />◼ check if the 1st character is a letter<br />◼ check if the 1st character is in the range A..J (or a..j)<br />◼ check if the 2nd character is a number<br />◼ check if the 2nd character is in the range 0..9|High|03/09/2019|
+|Automatic ship placement|◼ generating random orientation vertical/horizontal<br />◼ generating random coordinates to place a ship<br />◼ checking whether the calculated position would fit a ship of size X<br />◼ checking if every cell needed to sit a ship is not occupied<br />|High|04/09/2019|
+|Help message| ◼ Research ARGV<br />◼ Design a method to print out the help msg<br />◼ Implement the condition to deviate the normal flow of the app to the help msg method |Low|05/09/2019|
 
 Here is what my Trello board looked like after finishing breaking down the project into smaller elements
 
