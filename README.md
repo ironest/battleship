@@ -120,7 +120,7 @@ I decided to break down the project into several smaller tasks, so that it would
 | Feature | Checklist | Priority | Deadline |
 |------------------|--------------------|-------------------|-------------------|
 |User input Coordinates|◼ check if the input is a 2 character long string<br />◼ check if the 1st character is a letter<br />◼ check if the 1st character is in the range A..J (or a..j)<br />◼ check if the 2nd character is a number<br />◼ check if the 2nd character is in the range 0..9|High|03/09/2019|
-|Automatic ship placement|◼ generating random orientation vertical/horizontal<br />◼ generating random coordinates to place a ship<br />◼ checking whether the calculated position would fit a ship of size X<br />◼ checking if every cell needed to sit a ship is not occupied<br />|High|04/09/2019|
+|Automatic ship placement|◼ generating random orientation vertical/horizontal<br />◼ generating random coordinates to place a ship<br />◼ verify if the calculated position would fit ships of different sizes<br />◼ checking if every cell needed to sit a ship is not occupied<br />|High|04/09/2019|
 |Help message| ◼ Research ARGV<br />◼ Design a method to print out the help msg<br />◼ Implement the condition to deviate the normal flow of the app to the help msg method |Low|05/09/2019|
 
 Here is what my Trello board looked like after finishing breaking down the project into smaller elements
