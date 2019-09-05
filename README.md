@@ -113,4 +113,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut varius m
 
 ### Status Updates ###
 
-A link to my Status Updates can be found [here on GitHub](docs/software_development_plan.md)
+A link to my Status Updates can be found [here on GitHub](docs/development-log.md)
