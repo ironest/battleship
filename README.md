@@ -255,6 +255,7 @@ Use [-h] or [--help] to access the help menu
 The Battleship game has a simple design which relies on a linear interaction, where a user is never requested to make a choice with multiple options or proposed a menu where to choose from more than one path. The inputs required are straightforward.
 When the game start, a welcoming message is printed and a big splash-screen is showed. Right underneath the splash-screen, the user is prompted to type his/her name for a more personalized experience.
 <img src="docs/07_splash_screen.png" alt="Welcome and Splash-screen" width="75%" height="75%"/>
+
 Once a name is provided, the player is brought to the main screen of the game, where two visual battle-fields are rendered:
  * the player's board
  * the opponent's board
