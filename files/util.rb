@@ -1,3 +1,5 @@
+require_relative "./util.rb"
+
 def init_board
 
     board = []
@@ -133,4 +135,19 @@ end
 
 def get_random_coordinates
     return [rand(0..9),rand(0..9)]
+end
+
+def display_ship_formation( ship_list )
+    puts "\nThe default ship formation is composed by: "
+
+    for item in ship_list.uniq
+        print "   #{ship_list.count(item)} ship(s) of type "
+
+        item.times do
+            print "◼ ".colorize(:color => get_ship_color(item))
+        end
+        puts ""
+
+    end
+    puts "\n"
 end

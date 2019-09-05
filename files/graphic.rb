@@ -104,3 +104,11 @@ def render_boards(player_board, enemy_board, round_counter)
     end
 
 end
+
+def get_ship_color(ship_lenght)
+    if (1..4).include?(ship_lenght)
+        return Ship_colors[ship_lenght]
+    else
+        return :default
+    end
+end
