@@ -4,19 +4,21 @@ Github Repo: [github.com/ironest/battleship](https://github.com/ironest/battlesh
 
 Contributors: Riccardo Carzania ([github.com/ironest](https://github.com/ironest))
 
-### Description
+### Purpose and Scope
 
-This project implements the famous Battleship game with the Ruby programming language. The game is created as a terminal app and, as such, is executed and played from the command line interface. 
+Battleship (also Battleships or Sea Battle) is a strategy type guessing game for two players. It is normally played on ruled grids (paper or board) on which each player's fleet of ships (including battleships) are marked. The locations of the fleets are concealed from the other player. Players alternate turns calling "shots" at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
 
-#### Purpose
+This version of the game is implemented with the Ruby programming language and offers the option of playing the game as a single player; the project is created as a terminal app and, as such, is executed and played from the command line interface. The purpose is to entertain the user by competing against the CPU, with the objective of winning the game.
 
-The app's purpose is to entertain a single user player who competes against the CPU, with the objective of winning the game.
+The grids (battlefields) in this version are square (10×10) and the individual squares in the grid are identified by letter and number (e.g. **B5**). On one grid the players controls their own ships and records the shots by the opponent. On the other grid the player records where the opponent (the computer) shot.
+
+Before play begins, an internal algorithm arranges ships for both the player and the computer. Each ship occupies a number of consecutive squares on the grid, arranged either horizontally or vertically. The number of squares for each ship is determined by the type of the ship. The ships cannot overlap (i.e., only one ship can occupy any given square in the grid). The types and numbers of ships allowed are the same for each player.
 
 ### Development plan
 
 #### Brainstorming
 
-The main requirement of the project is to build an app for the command line, which is usually an unfriendly environment for the average user. Due to this, my brainstorming process was heavily affected by the urge of making something fun and enjoyable for "average user". With that in mind, I decided to go for a simple game.
+The requirement of the project was to build an app for the command line, which is usually an unfriendly environment for the average user. Due to this, my brainstorming process was heavily affected by the urge of making something fun and enjoyable for "average user". With that in mind, I decided to go for a simple game.
 Usually, a game is more enjoyable when there's graphic, animations, colors and mouse-inputs but, once again, the "command line" requirement brings in some strong constraints. That means the game has to leverage more the art of "patience" and "strategy" rather than visual effects.
 
 This is why I decided to recreate the old BattheShip game:
