@@ -3,6 +3,11 @@ require_relative "./files/graphic"
 
 ship_list = [1, 1, 1, 2, 2, 2, 3, 3, 4]
 
+# Check whether the command line options/arguments were provided
+argv_copy = ARGV.map{ |i| i }
+ARGV.clear
+check_options(argv_copy)
+
 show_splash_screen
 
 print "\nEnter your name: "
