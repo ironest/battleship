@@ -47,7 +47,7 @@ while true
             print "Where do you want to shoot? "
             coordinates = gets.chomp
             break if validate_coordinates(coordinates)
-            print "Wrong coordinates... try again"
+            print "Wrong coordinates... try again".colorize(:color => :light_red)
             sleep 1
             system("clear")
             render_boards(player_board, enemy_board, turn_counter)
