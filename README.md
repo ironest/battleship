@@ -100,17 +100,17 @@ I decided to break down the project into several smaller tasks, so that it would
 |Automatic ship placement|◼ generating random orientation vertical/horizontal<br />◼ generating random coordinates to place a ship<br />◼ verify if the calculated position would fit ships of different sizes<br />◼ checking if every cell needed to sit a ship is not occupied<br />|High|04/09/2019|
 |Help message| ◼ Research ARGV<br />◼ Design a method to print out the help msg<br />◼ Implement the condition to deviate the normal flow of the app to the help msg method |Low|05/09/2019|
 
-On the 2nd of September, here is what my Trello board looked like after finishing breaking down the project into smaller elements
+On the 2nd of September, here is what my [Trello board](https://trello.com/b/4ZAPNUhw) looked like after finishing breaking down the project into smaller elements
 
 <img src="docs/00_trello_backlog.png" alt="Backlog Github" width="250"/>
 
-On the 5th of September, here is how my Trello board evolved: more tasks have been added as a conseguence of:
+On the 5th of September, here is how my [Trello board](https://trello.com/b/4ZAPNUhw) evolved: more tasks have been added as a conseguence of:
 * New ideas
 * Nice-to-have features
-* Lack of task planning
+* Lack of planning
 * Bugs
 
-<img src="docs/10_trello_backlog.png" alt="Backlog Github" width="500"/>
+<img src="docs/10_trello_backlog.png" alt="Backlog Github" width="100%"/>
 
 ### Features
 
