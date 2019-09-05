@@ -4,6 +4,34 @@ Github Repo: [github.com/ironest/battleship](https://github.com/ironest/battlesh
 
 Contributors: Riccardo Carzania ([github.com/ironest](https://github.com/ironest))
 
+### Getting started
+
+1. Clone the **Battleship** git repository locally:
+   ```shell
+   git clone https://github.com/ironest/battleship.git
+   ```
+2. Move into the repository folder:
+   ```shell
+   cd battleship
+   ```
+3. Execute the deployment shell script:
+   ```shell
+   ./deploy.sh
+   ```
+4. Move into the **dist** folder:
+   ```shell
+   cd dist
+   ```
+5. Install external gems:
+   ```shell
+   gem install colorize
+   ```
+6. Start the app
+   ```shell
+   ruby index.rb
+   ```
+7. Enjoy!
+
 ### Purpose and Scope
 
 Battleship (also Battleships or Sea Battle) is a strategy type guessing game for two players. It is normally played on ruled grids (paper or board) on which each player's fleet of ships (including battleships) are marked. The locations of the fleets are concealed from the other player. Players alternate turns calling "shots" at the other player's ships, and the objective of the game is to destroy the opposing player's fleet.
