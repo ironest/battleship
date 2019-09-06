@@ -1,10 +1,5 @@
 require "colorize"
 
-# String.colors                       # return array of all possible colors names
-# String.modes                        # return array of all possible modes
-# String.color_samples                # displays color samples in all combinations
-# exit
-
 Ship_colors = {
     4 => :light_yellow,   # aircraft carrier
     3 => :light_green,    # cruiser
@@ -78,12 +73,12 @@ def render_boards(player_board, enemy_board, round_counter)
     puts "Computer board".center(22)
     puts ""
 
-    # Printing out letters for the player board
+    # Printing out letters (Axis) for the player board
     render_letters
 
     print Separator
 
-    # Printing out letters for the CPU board
+    # Printing out letters (Axis) for the CPU board
     render_letters
 
     print "\n"
