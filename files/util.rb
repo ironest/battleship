@@ -91,10 +91,8 @@ def is_number?( string )
     begin
         Float(string)
     rescue
-        puts "Error rescued"
         return false
     end
-    puts "returned true"
     return true
 end
 
