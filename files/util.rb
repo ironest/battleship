@@ -87,8 +87,15 @@ def random_place_ship(size, board)
 
 end
 
-def is_number? string
-    true if Float(string) rescue false
+def is_number?( string )
+    begin
+        Float(string)
+    rescue
+        puts "Error rescued"
+        return false
+    end
+    puts "returned true"
+    return true
 end
 
 def validate_coordinates( input )
