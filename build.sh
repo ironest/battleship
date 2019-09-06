@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-echo "Start deployment"
+echo "Start building"
 
 if [ -d "./dist" ]
 then
@@ -10,7 +10,7 @@ then
     mv ./dist ./$BCK_FOLDER
 fi
 
-echo "Deploying files..."
+echo "Building app..."
 
 mkdir dist
 cp index.rb \
